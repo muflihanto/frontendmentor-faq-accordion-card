@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-body;
+}
+
+main {
+  box-shadow: 0px 50px 30px -20px hsla(238, 29%, 16%, 0.3);
+  @apply px-[24px];
+}
+
+details {
+  @apply after:block after:w-full after:content-[""] after:h-[1px] after:border-t-[1.5px] after:mt-[15px] open:after:mt-[17px] after:mb-[15px] after:border-t-base-50;
+}
+
+details > p {
+  @apply mt-[10px] mb-[18px] text-[12px] text-base-100 pr-3;
+}
+
+summary {
+  @apply flex justify-between list-none after:content-[url("./images/icon-arrow-down.svg")] group-open:after:-rotate-180 after:transition-transform after:duration-150 group-open:font-bold hover:cursor-pointer after:origin-center group-open:text-primary-text-blue group-open:tracking-[0.005em] tracking-[0.005em] group-open:mt-[16px] group-open:leading-[18px] text-[13px];
+}
+
+.attribution {
+  @apply text-base-50 absolute bottom-3 text-[11px] text-center;
+}
+
+.attribution a {
+  @apply text-primary-text-blue hover:underline font-bold;
+}
+
+.img-comp-overlay {
+  @apply top-0 left-0 absolute w-auto h-max overflow-hidden text-left max-w-[100vw];
+}
+
+.img-comp-img {
+  @apply block h-full w-[375px] lg:w-screen object-none max-w-none left-0 object-left-top;
+}

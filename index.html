@@ -1,40 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | FAQ Accordion Card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
+    <!-- Google Fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+    <title>Frontend Mentor | FAQ Accordion Card</title>
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+    <link
+      href="./styles.css"
+      rel="stylesheet"
+    />
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
+    <!-- <script
+      defer
+      src="./slider.js"
+    ></script> -->
+  </head>
+  <body class="bg-gradient-to-b from-primary-bg-violet to-primary-bg-blue bg-no-repeat flex flex-col justify-center items-center min-h-screen h-max pt-10 pb-[85px] relative">
+    <main class="bg-white w-[calc(100vw-(2*24px))] mx-auto rounded-3xl relative h-fit pt-[132px] pb-[34px] mt-[108px]">
+      <!-- <header> -->
+      <div class="relative w-full h-max">
+        <img
+          src="./images/illustration-woman-online-mobile.svg"
+          alt="Illustration Woman Online"
+          class="absolute bottom-[60px] w-full px-[21px] object-none z-10"
+        />
+        <img
+          src="./images/bg-pattern-mobile.svg"
+          alt="Background Patter"
+          class="absolute bottom-[28px] w-full px-[20px]"
+        />
+      </div>
+      <!-- </header> -->
+      <section>
+        <h1 class="text-center text-[32px] leading-[36px] font-bold">FAQ</h1>
+        <div class="mt-8 text-base-200">
+          <details class="group">
+            <summary>How many team members can I invite?</summary>
+            <p>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+          </details>
+          <details
+            class="group"
+            open
+          >
+            <summary>What is the maximum file upload size?</summary>
+            <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </details>
+          <details class="group">
+            <summary>How do I reset my password?</summary>
+            <p>Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+          </details>
+          <details class="group">
+            <summary>Can I cancel my subscription?</summary>
+            <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </details>
+          <details class="group">
+            <summary>Do you provide additional support?</summary>
+            <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+          </details>
+        </div>
+      </section>
+    </main>
 
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://github.com/muflihanto"
+        target="_blank"
+        >Muflihanto</a
+      >.
+    </footer>
+  </body>
 </html>
