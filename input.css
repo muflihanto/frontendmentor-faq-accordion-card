@@ -3,36 +3,75 @@
 @tailwind utilities;
 
 body {
-  @apply font-body;
+  @apply font-body bg-[length:100vw_1120px] xl:bg-[length:auto] bg-gradient-to-b from-primary-bg-violet to-primary-bg-blue bg-no-repeat flex flex-col justify-center items-center min-h-screen h-max pt-[40px] pb-[85px] xl:pb-[41px] relative;
 }
 
 main {
-  box-shadow: 0px 50px 30px -20px hsla(238, 29%, 16%, 0.3);
-  @apply px-[24px];
+  box-shadow: 0px 45px 30px -20px hsla(238, 29%, 16%, 0.29), 0px 80px 70px -10px hsla(238, 29%, 16%, 0.095);
+  @apply px-[24px] xl:translate-x-5 bg-white w-[calc(100vw-(2*24px))] max-w-[327px] mx-auto rounded-3xl relative h-fit pb-[34px] mt-[108px] xl:flex xl:max-w-[920px] xl:p-0 xl:justify-start xl:mt-[0px] xl:pl-0;
+}
+
+.illustrations {
+  @apply relative w-full h-[132px] xl:w-[476px] xl:h-[509px];
+}
+
+.illustration-box {
+  filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.2));
+  @apply hidden absolute top-0 translate-y-[111%] -left-[92px] z-[19] w-max max-w-[200px] xl:block;
+}
+
+.illustrations > div {
+  @apply relative w-full h-full xl:overflow-hidden;
+}
+
+.illustration-woman {
+  @apply absolute bottom-[60px] min-w-[279px] w-full px-[21px] object-none z-10 max-w-[279px] xl:bottom-1/2 xl:translate-y-1/2 xl:max-w-[480px] xl:w-fit xl:h-full xl:-left-[83px] xl:px-0 xl:pb-[11px];
+}
+
+.illustration-bg {
+  @apply absolute bottom-[28px] w-full px-[20px] max-w-[279px] min-w-[279px] xl:max-w-[1080px] xl:-bottom-[141px] xl:min-w-full xl:w-fit xl:right-[66px];
+}
+
+.faq {
+  @apply xl:w-[372px] xl:pt-[64px] xl:pb-[40px];
+}
+
+.faq > h1 {
+  @apply text-center text-[32px] leading-[36px] font-bold xl:text-left;
+}
+
+.faq > div {
+  @apply mt-8 text-base-200 xl:mt-[38px] xl:h-[310px] xl:pr-[20px] xl:overflow-y-scroll;
 }
 
 details {
-  @apply after:block after:w-full after:content-[""] after:h-[1px] after:border-t-[1.5px] after:mt-[15px] open:after:mt-[17px] after:mb-[15px] after:border-t-base-50;
+  @apply after:block after:w-full after:content-[""] after:h-[1px] after:border-t-[1.5px] after:mt-[15px] open:after:mt-[17px] after:mb-[15px] after:border-t-base-50 xl:open:after:mb-[14px] xl:after:mb-[14px];
 }
 
 details > p {
-  @apply mt-[10px] mb-[18px] text-[12px] text-base-100 pr-3;
+  @apply mt-[10px] mb-[18px] text-[12px] text-base-100 pr-3 xl:mt-[9px];
 }
 
 summary {
-  @apply flex justify-between list-none after:content-[url("./images/icon-arrow-down.svg")] group-open:after:-rotate-180 after:transition-transform after:duration-150 group-open:font-bold hover:cursor-pointer after:origin-center group-open:text-primary-text-blue group-open:tracking-[0.005em] tracking-[0.005em] group-open:mt-[16px] group-open:leading-[18px] text-[13px];
+  @apply flex justify-between list-none after:content-[url("./images/icon-arrow-down.svg")] group-open:after:-rotate-180 after:transition-transform after:duration-150 group-open:font-bold hover:cursor-pointer after:origin-center group-open:text-primary-text-blue group-open:tracking-[0.005em] tracking-[0.005em] group-open:mt-[16px] group-open:leading-[18px] text-[13px] xl:text-[14px] xl:after:mr-[17px] focus:outline-none;
 }
 
 .attribution {
-  @apply text-base-50 absolute bottom-3 text-[11px] text-center;
+  @apply text-base-50 absolute bottom-3 text-[11px] text-center bg-transparent;
 }
 
 .attribution a {
   @apply text-primary-text-blue hover:underline font-bold;
 }
 
+@media (min-width: 1280px) {
+  main {
+    box-shadow: 0px 50px 50px -20px hsla(238, 29%, 16%, 0.4);
+  }
+}
+
 .img-comp-overlay {
-  @apply top-0 left-0 absolute w-auto h-max overflow-hidden text-left max-w-[100vw];
+  @apply top-0 left-0 absolute w-auto h-max overflow-hidden text-left max-w-[100vw] z-20;
 }
 
 .img-comp-img {
