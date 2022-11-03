@@ -6,7 +6,7 @@ body {
   @apply font-body bg-[length:100vw_1120px] xl:bg-[length:auto] bg-gradient-to-b from-primary-bg-violet to-primary-bg-blue bg-no-repeat flex flex-col justify-center items-center min-h-screen h-max pt-[40px] pb-[85px] xl:pb-[41px] relative;
 }
 
-main {
+.App {
   box-shadow: 0px 45px 30px -20px hsla(238, 29%, 16%, 0.29), 0px 80px 70px -10px hsla(238, 29%, 16%, 0.095);
   @apply px-[24px] xl:translate-x-5 bg-white w-[calc(100vw-(2*24px))] max-w-[327px] mx-auto rounded-3xl relative h-fit pb-[34px] mt-[108px] xl:flex xl:max-w-[920px] xl:p-0 xl:justify-start xl:mt-[0px] xl:pl-0;
 }
@@ -28,15 +28,15 @@ main {
   @apply absolute bottom-[28px] w-full px-[20px] max-w-[279px] min-w-[279px] xl:max-w-[1080px] xl:bottom-[331px] xl:translate-y-1/2 xl:min-w-full xl:w-fit xl:right-[66px] transition-transform duration-500 delay-100;
 }
 
-.faq {
+main {
   @apply xl:w-[372px] xl:pt-[64px] xl:pb-[40px];
 }
 
-.faq > h1 {
+main > h1 {
   @apply text-center text-[32px] leading-[36px] font-bold xl:text-left;
 }
 
-.faq > div {
+main > .faq {
   @apply mt-8 text-base-200 xl:mt-[38px] xl:h-[310px] xl:pr-[20px] xl:overflow-y-scroll;
 }
 
@@ -61,7 +61,7 @@ summary {
 }
 
 @media (min-width: 1280px) {
-  main {
+  .App {
     box-shadow: 0px 50px 50px -20px hsla(238, 29%, 16%, 0.4);
   }
 }
